@@ -1,0 +1,1155 @@
+:root {
+  --primaryBlue: #1a667a;
+  --secondaryBlue: #8cb3bc;
+  --primaryGray: #777775;
+  --secondyGray: #898f9c;
+  --green: #a6e4b0;
+}
+
+body {
+  background-color: #f3f5fa;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 0 0 #ddd;
+  border-color: unset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0;
+}
+
+/* ------------- Themes ---------------------- */
+
+.themeDark {
+  background-color: black !important;
+}
+
+.themeTransition {
+  transition: background 0.2s linear;
+}
+
+.content-light {
+  background-color: #e9f0f3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16%;
+  width: 84%;
+  overflow: scroll;
+  object-fit: fill;
+}
+
+.content-light::-webkit-scrollbar {
+  display: none;
+}
+
+.content-dark {
+  background-color: rgb(33, 33, 34);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 16%;
+  width: 84%;
+  overflow: scroll;
+  object-fit: fill;
+}
+
+.content-dark::-webkit-scrollbar {
+  display: none;
+}
+
+.invest-dark-theme {
+  background-image: linear-gradient(143deg, #212529, #6c757d) !important;
+}
+
+.total-balance-button-theme {
+  background-color: #212122 !important;
+}
+
+.buttonGroup-dark {
+  background-color: rgba(0, 0, 0, 0.774) !important;
+}
+
+#total-balance-text-dark {
+  color: white !important;
+}
+
+.side-bar-col {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: scroll;
+  object-fit: fill;
+}
+
+.side-bar-col::-webkit-scrollbar {
+  display: none;
+}
+
+.inputDark {
+  background-color: #212122;
+  color: gray;
+  border: none;
+}
+
+.inputDark:focus {
+  background-color: #212122;
+  color: gray;
+}
+
+.light {
+  color: gray;
+}
+
+.lightDark {
+  background-color: #00000087 !important;
+}
+
+.light:hover {
+  background-color: #bfc5d1;
+}
+/* ------------------------------------
+  SIDE NAVBAR
+------------------------------------- */
+#sidebar {
+  transition: all 0.3s;
+  position: fixed;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px 0;
+}
+
+#sidebar ul li a {
+  padding: 4px;
+  font-size: 1.1em;
+  display: block;
+  text-decoration: none;
+  color: var(--secondyGray);
+}
+
+#logo {
+  color: #0782a1;
+  font-weight: bold;
+}
+
+.menu-message {
+  margin-bottom: 4px;
+  margin-left: 30px;
+}
+
+.sidebar-links {
+  padding-top: 31px;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  height: 78px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.dashboard:hover {
+  /* border-left: 8px solid var(--green); */
+  cursor: pointer;
+}
+
+.dashboard > span {
+  padding-left: 10px;
+}
+
+.sideLinkWrapper span {
+  padding-left: 10px;
+}
+
+.active {
+  border-left: 8px solid var(--primaryBlue);
+  margin-left: 5px;
+  /* box-shadow: -1px 1px 3px; */
+}
+
+#side:hover {
+  margin-left: 5px;
+  box-shadow: -1px 1px 3px;
+}
+
+/* ------------------------------------
+  TOP NAVBAR
+------------------------------------- */
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  color: var(--secondyGray);
+}
+
+#welcomeMessage {
+  color: var(--primaryBlue);
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+}
+
+#avatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 30px;
+}
+
+#bell {
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+}
+
+/* ---------- Mode Toggle ----------- */
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #bfc5d1;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 17px;
+  width: 39px;
+  margin-right: 44px;
+  transform: scale(1.5);
+  box-shadow: inset 0px 0px 3px 0px;
+}
+
+.label .ball {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -6px;
+  height: 17px;
+  width: 17px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+  font-size: 11px;
+}
+
+.fa-sun {
+  color: #f39c12;
+  font-size: 11px;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+
+.dropdown-toggle:hover {
+  white-space: nowrap;
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+
+.dropdown-toggle::after {
+  content: unset;
+}
+
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: unset;
+  border: none;
+}
+
+.btn-primary:focus {
+  color: #fff;
+  background-color: unset;
+  border: none;
+  box-shadow: none;
+}
+
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none !important;
+}
+
+/* ---------------------------------
+  LOGIN / SIGNUP
+------------------------------------ */
+
+.box {
+  margin-top: 27px;
+  height: 90vh;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 13px 12px 19px 0px rgb(208, 209, 209);
+  position: relative;
+}
+
+.alertContainer {
+  width: 30%;
+  position: absolute;
+  top: 2%;
+  left: 30%;
+  z-index: 1;
+}
+
+#inputError {
+  border: 2px solid #b8222e;
+}
+
+/* .inputCorrect{
+  border: 2px solid yellowgreen;
+} */
+
+.formHolder {
+  margin: 0 90px;
+  margin-top: 43px;
+}
+
+.formSection {
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.nav-tabs .nav-link.active {
+  color: #efca92 !important;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: var(--primaryBlue);
+}
+
+.email {
+  margin-top: 40px;
+}
+
+#terms {
+  margin: 26px 0;
+  font-size: 13px;
+  color: rgb(141, 146, 148);
+}
+
+.login_btn {
+  width: 100%;
+  background: var(--primaryBlue);
+  padding: 10px;
+  border: 0;
+  color: white;
+  font-size: 17px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login_btn:hover {
+  background-color: var(--secondaryBlue);
+}
+
+.submit_btn {
+  width: 100%;
+  background: var(--primaryGray);
+  padding: 10px;
+  margin-top: 23px;
+  border: 0;
+  color: white;
+  font-size: 17px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit_btn:hover {
+  background-color: var(--secondyGray);
+}
+
+/* --------------------------------------- */
+.aboutSection {
+  background-image: linear-gradient(to right, #1a667a, #8cb3bc);
+  width: 100%;
+  height: 90vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.tabBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#aboutText {
+  text-align: center;
+  width: 459px;
+  color: #ddd;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 42px;
+}
+
+.tabBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#aboutText {
+  text-align: center;
+  width: 459px;
+  color: #ddd;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 42px;
+}
+
+/* ----------------------------------
+  DASHBOARD CARDS
+----------------------------------- */
+.dashboard-cards {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#total-balance-row {
+  flex-direction: column !important;
+}
+
+#card-shape {
+  align-items: center !important;
+}
+
+/* ----------- Total Balance ----------------- */
+.balance-info {
+  line-height: 30px;
+  text-align: center;
+  color: var(--secondyGray);
+}
+
+#total-balance-text {
+  color: black;
+  font-weight: 500;
+}
+
+#total-amount {
+  color: var(--primaryBlue);
+  font-weight: bold;
+}
+
+.total-balance-buttons {
+  background-color: #e9f0f3;
+  border-radius: 10px;
+  width: 286px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.buttonGroup {
+  padding: 4px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#balanceIcon {
+  width: 23px;
+  height: 23px;
+  display: block;
+  color: var(--primaryBlue);
+  fill: var(--primaryBlue);
+}
+
+.iconCase span {
+  color: var(--secondyGray);
+}
+
+.investment-card {
+  background-image: linear-gradient(
+    143deg,
+    var(--primaryBlue),
+    #a6d7e4,
+    #a6e4b081
+  );
+}
+
+#investment-amount {
+  color: white;
+  font-weight: bold;
+}
+
+#invest-icon {
+  height: 159px;
+  width: 232px;
+}
+
+#flexible-money-icon {
+  height: 144px;
+  width: 151px;
+}
+
+#fixed-amount {
+  color: orangered;
+  font-weight: bold;
+}
+
+#flexible-amount {
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+/* ----------------------------------
+  GOALS
+------------------------------------- */
+
+#set-goal-card {
+  height: 120px;
+}
+
+.goal-cards {
+  height: 432px;
+  background-color: white;
+  color: var(--secondyGray);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noGoals {
+  height: 77vh;
+  position: relative;
+}
+
+.noGoalBox {
+  color: gray;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#createGoalBtn {
+  padding: 9px 75px;
+  border: none;
+  background: yellowgreen;
+  border-radius: 7px;
+  color: white;
+  margin-top: 30px;
+}
+
+#createGoalBtn:hover {
+  background-color: rgb(118, 158, 37);
+}
+
+.goal-amount-row {
+  padding: 15px 0;
+}
+
+.goal-progress {
+  margin-bottom: 20px;
+}
+
+.goal-info-row {
+  margin-top: 27px;
+}
+
+.goal-dates-row {
+  margin-bottom: 19px;
+}
+
+#saved {
+  color: violet;
+}
+
+#saved-percent {
+  color: violet;
+}
+
+#duration-percent {
+  color: #f1c40f;
+}
+
+.progress-bar {
+  background-color: violet;
+}
+
+#saving-frequency-amount {
+  color: yellowgreen;
+}
+
+#fixed-savings {
+  color: orangered;
+}
+
+#flexible-savings {
+  color: yellowgreen;
+}
+
+#savings-buttons-row {
+  text-align: center;
+  margin-top: 26px;
+}
+
+#liquidated-button {
+  padding: 9px 38px;
+  background-color: rgba(202, 6, 6, 0.459);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#liquidate-button {
+  padding: 9px 38px;
+  background-color: rgba(202, 6, 6, 0.877);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* -----------------------------------
+  CREATE GOAL
+-------------------------------------- */
+.goalContainer {
+  padding: 0 123px;
+  position: relative;
+}
+
+.goalFormHolder {
+  width: 100%;
+  height: 72vh;
+  background-color: white;
+}
+
+.createGoalForm {
+  padding: 40px;
+}
+
+ul.nav.nav-tabs {
+  border: none;
+  margin-top: -20px;
+  margin-bottom: 7px;
+}
+
+.createGoalButton {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 15px;
+  border: none;
+  background-color: #ffc107;
+  color: white;
+  font-weight: bold;
+}
+
+.createGoalButton:hover {
+  background-color: #d19e06;
+}
+
+label.form-label {
+  color: var(--primaryBlue);
+  font-weight: 600;
+}
+/* ------------------------------------
+  TRANSACTIONS
+-------------------------------------*/
+
+.goal_list_container {
+  display: flex;
+  justify-content: center;
+}
+
+.goal_list {
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: var(--primaryGray);
+  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 10px;
+}
+
+.goal_list:hover {
+  box-shadow: 2px 2px 4px var(--secondyGray);
+}
+
+.goal_holder {
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#historyTitle {
+  color: var(--primaryGray);
+}
+
+#historyAmount {
+  color: green;
+}
+
+#historyStatus {
+  color: yellowgreen;
+}
+
+.historyWrapper {
+  padding-left: 10px;
+  background-color: white;
+  color: var(--secondyGray);
+  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 10px;
+}
+
+.historyHeader {
+  padding-left: 20px;
+}
+
+.historyCard {
+  padding-left: 10px;
+  background-color: #f3f5fa;
+  color: var(--secondyGray);
+  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 5px;
+}
+
+.historyCard:nth-child(even) {
+  background-color: #0782a13b;
+  color: white !important;
+}
+
+.red {
+  color: red !important;
+}
+
+.transaction_wrapper {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#goal_status_completed {
+  color: yellowgreen;
+}
+
+#goal_status_active {
+  color: orange;
+}
+
+/* ============= Goal Section Nav =================== */
+#goal-section-nav-button {
+  margin-right: 24px;
+  margin-bottom: 15px;
+  border: none;
+  background-color: unset;
+  color: goldenrod;
+}
+
+/* ================== Card Form ===================== */
+.cardFormWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cardForm {
+  padding: 18px 30px;
+  background-color: white;
+  width: 50%;
+}
+
+.cardDescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goalLink {
+  border-bottom: 2px solid goldenrod;
+}
+
+/* =========== Profile ======================= */
+
+.profileWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 80%;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 11px #ddd;
+}
+
+.details {
+  justify-content: center;
+}
+
+.avaterHolder {
+  width: 150px;
+  height: 150px;
+  background-color: #b6babe;
+  border-radius: 50%;
+  margin-top: -40px;
+  box-shadow: 0px 7px 10px #ddd;
+}
+
+#userName {
+  text-align: center;
+  color: rgb(137, 138, 141);
+  text-transform: capitalize;
+}
+
+#profileAddCard {
+  background-color: yellowgreen;
+}
+
+#profileAddCard:hover {
+  background-color: rgb(118, 158, 37);
+}
+
+#profileChangePassword {
+  background-color: #b6babe;
+}
+
+#profileChangePassword:hover {
+  background-color: #909396;
+}
+
+.tab-content > .active {
+  display: block;
+  border: none;
+  margin: 0;
+}
+
+.passwordInputHoldder {
+  position: relative;
+}
+
+#eye {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 20px;
+  cursor: pointer;
+}
+
+#noGoalAlart {
+  animation: moveInTop 1s;
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.bar-wrapper{
+  height: 400px;
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+}
+
+
+
+
+/* ------------------------------------
+  MEDIA QUERIES
+------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .layoutRow {
+    flex-direction: column-reverse;
+  }
+
+  .side-bar-col {
+    padding: 0;
+    position: unset;
+  }
+
+  .content-dark {
+    width: 100%;
+    left: 0;
+    z-index: -1;
+  }
+
+  .content-light {
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .box {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .aboutSection {
+    display: none;
+  }
+
+  .formHolder {
+    margin: 0px 30px;
+    margin-top: 69px;
+  }
+
+  .formSection {
+    background-color: white;
+    border-radius: 0;
+    margin: 0 15px;
+    padding-bottom: 40px;
+    box-shadow: 13px 12px 19px 0px rgb(208 209 209);
+  }
+
+  .alert-danger {
+    width: 218px;
+    padding-left: 10px;
+  }
+
+  /* --------------------------- 
+    SIDE NAV
+  -----------------------------*/
+
+  #sidebar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #e9f0f3;
+  }
+
+  .sidebar-links {
+    padding-top: 0;
+  }
+
+  .sideLinkWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .smallSvg {
+    height: 25px;
+  }
+
+  .list-unstyled.components {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .menu-message {
+    display: none;
+  }
+
+  .dashboard {
+    justify-content: center;
+    padding-left: 0;
+    width: 77px;
+  }
+
+  .dashboard:hover {
+    background-color: transparent;
+    border: none;
+    transform: scale(1.2);
+    transition: all ease-out 0.3s;
+  }
+
+  #sidebar ul li a {
+    font-size: 10px;
+  }
+
+  #completedIcon {
+    height: 30px;
+  }
+
+  .container-sm {
+    max-width: unset;
+  }
+
+  .active {
+    border: unset;
+    border-bottom: 5px solid var(--primaryBlue);
+  }
+
+  #side:hover {
+    box-shadow: none;
+  }
+
+  /* ----------------------------------
+    DASHBOARD CARDS
+  ----------------------------------- */
+  .dashboardRow {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .dashboardRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .goal-cards {
+    height: 486px;
+  }
+
+  #savings-buttons-row {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .total-balance-col {
+    margin-left: -19px;
+  }
+
+  /* ---------------------------------
+    LOGIN
+  ------------------------------------ */
+  .goalContainer {
+    padding: 0;
+  }
+
+  .goalFormHolder {
+    height: 90vh;
+  }
+
+  /* ---------------------------------
+    Card Form
+  ------------------------------------ */
+  .cardForm {
+    width: 100%;
+  }
+
+  .cardDescription {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  div.container-sm {
+    padding: 0 !important;
+  }
+
+  .intro {
+    margin-top: 6px;
+    margin-bottom: 19px;
+    padding: 0;
+  }
+
+  .dashboard {
+    height: unset;
+    width: 68px;
+  }
+
+  .yam:last-child {
+    margin-bottom: 56px;
+  }
+
+  .label {
+    transform: scale(1.3);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .smallSvg {
+    height: 22px;
+  }
+
+  .dashboard {
+    width: 53px;
+  }
+
+  #welcomeMessage {
+    font-size: 18px;
+  }
+
+  .label {
+    margin-right: 26px;
+    transform: scale(1);
+  }
+
+  .goal-cards {
+    height: 406px;
+    font-size: 12px;
+  }
+
+  #bell {
+    width: 34px;
+  }
+}
