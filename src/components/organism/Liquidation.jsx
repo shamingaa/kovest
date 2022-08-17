@@ -48,7 +48,7 @@ const Liquidation = () => {
     try {
       const res = await axios({
         method: "post",
-        url: "http://localhost:5000/v1/user/withdraw",
+        url: "https://kovest.herokuapp.com/user/withdraw",
         headers: { Authorization: `Bearer ${token}` },
         data: userData,
       });

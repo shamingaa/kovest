@@ -39,7 +39,7 @@ const Layout = () => {
       try {
         const res = await axios({
           method: "get",
-          url: "http://localhost:5000/v1/goals/fetch",
+          url: "https://kovest.herokuapp.com/v1/goals/fetch",
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -60,7 +60,7 @@ const Layout = () => {
         if(token){
           const res = await axios({
             method: "get",
-            url: "http://localhost:5000/v1/user/me",
+            url: "https://kovest.herokuapp.com/v1/user/me",
             headers: { Authorization: `Bearer ${token}` },
           });
           

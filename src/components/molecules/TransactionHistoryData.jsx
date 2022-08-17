@@ -16,7 +16,7 @@ const TransactionHistoryData = ({ goalData }) => {
       try {
         const res = await axios({
           method: "get",
-          url: `http://localhost:5000/v1/user/transaction?goal_id=${id}`,
+          url: `https://kovest.herokuapp.com/v1/user/transaction?goal_id=${id}`,
           headers: { Authorization: `Bearer ${token}` },
         });
 

@@ -53,8 +53,9 @@ const Login_Signup = () => {
 
     try {
       const res = await axios({
+        mode: 'cors',
         method: "post",
-        url: "http://localhost:5000/v1/auth/signup",
+        url: "https://kovest.herokuapp.com/v1/auth/signup",
         data: userData,
       });
 
@@ -78,7 +79,7 @@ const Login_Signup = () => {
     try {
       const res = await axios({
         method: "post",
-        url: "http://localhost:5000/v1/auth/login",
+        url: "https://kovest.herokuapp.com/v1/auth/login",
         data: loginDetails,
       });
 

@@ -90,7 +90,7 @@ const GoalForm = () => {
     try {
       const res = await axios({
         method: "post",
-        url: "http://localhost:5000/v1/goals/create",
+        url: "https://kovest.herokuapp.com/v1/goals/create",
         data: sentGoals,
         headers: { Authorization: `Bearer ${token}` },
       });

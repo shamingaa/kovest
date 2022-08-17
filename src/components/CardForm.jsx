@@ -36,7 +36,7 @@ const CardForm = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.put("http://localhost:5000/v1/user/card", body, {
+      const res = await axios.put("https://kovest.herokuapp.com/v1/user/card", body, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
