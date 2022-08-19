@@ -1208,6 +1208,22 @@ label.form-label {
   #goal_status_completed {
     font-size: 13px;
   }
+
+  .goal-amount-row {
+    padding: 0;
+  }
+
+  .goal-cards {
+    height: 378px;
+  }
+
+  #liquidate-button {
+    padding: 6px 31px;
+  }
+
+  .goal-cards {
+    margin-bottom: 12px;
+}
 }
 
 @media screen and (max-width: 320px) {
