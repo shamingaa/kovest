@@ -1121,6 +1121,10 @@ label.form-label {
   height: unset;
 }
 
+#main_transaction{
+  padding: 0 !important;
+}
+
   /* ---------------------------------
     LOGIN
   ------------------------------------ */

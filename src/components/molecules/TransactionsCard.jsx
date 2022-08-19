@@ -10,7 +10,7 @@ const TransactionsCard = () => {
   const navigate = useNavigate();
 
   return goals.map(({ goal_title, savings_status, id }) => (
-    <Container key={id}>
+    <Container key={id} id="main_transaction">
       <Col>
         <div
           className={`goal_list themeTransition ${
