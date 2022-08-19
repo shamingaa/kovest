@@ -9,7 +9,7 @@ const TransactionGoalList = () => {
   const { goal_title, id } = state;
 
   return (
-    <Container>
+    <Container id="history_container">
       <TransactionHistoryTitle goalTitle={goal_title} />
 
       <Col>

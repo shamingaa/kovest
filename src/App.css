@@ -1125,8 +1125,6 @@ label.form-label {
   padding: 0 !important;
 }
 
-
-
 .profile {
   box-shadow: unset;
   width: 100%;
@@ -1142,6 +1140,16 @@ label.form-label {
 #profile_container{
   padding: 0;
 }
+
+.historyHeader {
+  padding: 0 6px;
+}
+
+#history_container{
+  padding: 0;
+}
+
+
   /* ---------------------------------
     LOGIN
   ------------------------------------ */

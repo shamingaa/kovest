@@ -55,7 +55,7 @@ const TransactionHistoryData = ({ goalData }) => {
                   id="historyAmount"
                   className={type === "liquidation" ? "red" : ""}
                 >
-                  {type === "liquidation" ? "-₦" : "+₦"}
+                  {type === "liquidation" ? "₦" : "₦"}
                   {amount.toLocaleString("en-US")}
                 </h6>
               </Col>
