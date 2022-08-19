@@ -1198,11 +1198,11 @@ label.form-label {
 
   /* ======= Changes =============== */
   h6 {
-    font-size: 9px !important;
+    font-size: 11px !important;
   }
 
-  #historyTitle {
-    font-size: 14px;
+  h5 {
+    font-size: 13px;
   }
 
   #goal_status_completed {
