@@ -1125,6 +1125,18 @@ label.form-label {
   padding: 0 !important;
 }
 
+
+
+.profile {
+  box-shadow: unset;
+  width: 100%;
+}
+
+.avaterHolder {
+  box-shadow: unset;
+  margin-top: 6px;
+  width: 100px;
+}
   /* ---------------------------------
     LOGIN
   ------------------------------------ */
