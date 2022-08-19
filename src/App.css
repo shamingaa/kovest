@@ -1134,8 +1134,13 @@ label.form-label {
 
 .avaterHolder {
   box-shadow: unset;
+  height: 100px;
   margin-top: 6px;
   width: 100px;
+}
+
+#profile_container{
+  padding: 0;
 }
   /* ---------------------------------
     LOGIN
