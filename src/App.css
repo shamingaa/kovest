@@ -1224,6 +1224,14 @@ label.form-label {
   .goal-cards {
     margin-bottom: 12px;
 }
+
+label.form-label {
+  font-size: 13px !important;
+}
+
+.createGoalForm {
+  padding: 21px;
+}
 }
 
 @media screen and (max-width: 320px) {
