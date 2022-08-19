@@ -1066,48 +1066,60 @@ label.form-label {
     height: 486px;
   }
 
-  
   #savings-buttons-row {
     text-align: center;
     margin-top: 16px;
   }
-  
+
   .total-balance-col {
     margin-left: -19px;
   }
-  
+
   /* ======== Changes ================ */
   .total-balance-buttons {
     width: 230px;
   }
 
-  #balance_card_small{
-    margin-left: 9px;
+  #balance_card_small {
+    margin-left: 22px;
   }
 
   #invest-icon {
     height: 131px;
     width: 210px;
     margin-left: 57px;
+  }
+
+  #flexible-money-icon {
+    height: 117px;
+    width: 151px;
+  }
+
+  .balance-info {
+    margin-right: 13px;
+  }
+
+  #lock {
+    width: 100px;
+  }
+
+  #dashboard_container {
+    padding: 0 !important;
+  }
+
+  .dashboard-cards {
+    height: 251px;
+  }
+
+  .intro {
+    margin-bottom: 19px;
+    margin-top: 20px;
+    padding: 0;
 }
 
-#flexible-money-icon {
-  height: 117px;
-  width: 151px;
+.bar-wrapper{
+  height: unset;
 }
-
-.balance-info {
-  margin-right: 13px;
-}
-
-#lock{
-  width: 100px;
-}
-
-#dashboard_container{
-  padding: 0 !important;
-}
-
 
   /* ---------------------------------
     LOGIN
