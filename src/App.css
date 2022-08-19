@@ -1232,6 +1232,17 @@ label.form-label {
 .createGoalForm {
   padding: 21px;
 }
+
+#profileChangePassword {
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+#profileAddCard {
+  font-size: 12px;
+  padding: 8px 0;
+}
+
 }
 
 @media screen and (max-width: 320px) {
