@@ -59,7 +59,7 @@ const DashboardCards = () => {
   return (
     <div>
       {goals.length > 0 ? "" : <AlertError />}
-      <Container>
+      <Container id="dashboard_container">
         <audio ref={audioPlayer} src={NotificationSound} />
         <Row className="dashboardRow">
           <Col lg="5" className="total-balance-col">

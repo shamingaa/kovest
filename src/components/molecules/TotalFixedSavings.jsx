@@ -12,7 +12,7 @@ const FixedGoalCard = () => {
   return (
     <Row id="card-shape">
       <Col>
-        <img src={lock} alt="invest Icon" />
+        <img src={lock} alt="invest Icon"  id="lock" />
       </Col>
       <Col>
         <div className="balance-info">

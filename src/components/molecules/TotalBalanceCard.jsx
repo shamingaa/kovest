@@ -29,6 +29,8 @@ const TotalBalanceCard = () => {
       className={`dashboard-cards themeTransition  ${
         themeCheck ? " " : "themeDark"
       }`}
+
+      id="balance_card_small"
     >
       <Row id="total-balance-row">
         <Col>
