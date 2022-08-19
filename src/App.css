@@ -1115,40 +1115,39 @@ label.form-label {
     margin-bottom: 19px;
     margin-top: 20px;
     padding: 0;
-}
+  }
 
-.bar-wrapper{
-  height: unset;
-}
+  .bar-wrapper {
+    height: unset;
+  }
 
-#main_transaction{
-  padding: 0 !important;
-}
+  #main_transaction {
+    padding: 0 !important;
+  }
 
-.profile {
-  box-shadow: unset;
-  width: 100%;
-}
+  .profile {
+    box-shadow: unset;
+    width: 100%;
+  }
 
-.avaterHolder {
-  box-shadow: unset;
-  height: 100px;
-  margin-top: 6px;
-  width: 100px;
-}
+  .avaterHolder {
+    box-shadow: unset;
+    height: 100px;
+    margin-top: 6px;
+    width: 100px;
+  }
 
-#profile_container{
-  padding: 0;
-}
+  #profile_container {
+    padding: 0;
+  }
 
-.historyHeader {
-  padding: 0 6px;
-}
+  .historyHeader {
+    padding: 0 6px;
+  }
 
-#history_container{
-  padding: 0;
-}
-
+  #history_container {
+    padding: 0;
+  }
 
   /* ---------------------------------
     LOGIN
@@ -1195,6 +1194,19 @@ label.form-label {
 
   .label {
     transform: scale(1.3);
+  }
+
+  /* ======= Changes =============== */
+  h6 {
+    font-size: 9px !important;
+  }
+
+  #historyTitle {
+    font-size: 14px;
+  }
+
+  #goal_status_completed {
+    font-size: 13px;
   }
 }
 
