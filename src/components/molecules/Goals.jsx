@@ -49,18 +49,12 @@ const Goals = () => {
         let moneySaved = Math.floor((amount_saved * 100) / amount_to_save);
         let remainingTime = 100 - moneySaved;
 
-        let actualTime = moment().format('mm'); 
-        let endTime = moment(end_date).format('mm'); 
-        let startTime = moment(start_date).format('mm'); 
+        let actualTime = moment().format("mm");
+        let endTime = moment(end_date).format("mm");
+        let startTime = moment(start_date).format("mm");
 
-        // console.table(`
-        // START: ${startTime} 
-        // END: ${endTime}
-        // ACTUAL: ${actualTime}
-        // `);
-
-        if(endTime === actualTime){
-          shouldLiquidateFixed = false
+        if (endTime === actualTime) {
+          shouldLiquidateFixed = false;
         }
 
         return (
