@@ -52,6 +52,14 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 0 0;
 }
 
+
+#mainLoader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* ------------- Themes ---------------------- */
 
 .themeDark {
@@ -1072,7 +1080,7 @@ label.form-label {
   }
 
   .total-balance-col {
-    margin-left: -19px;
+    margin-left: -26px;
   }
 
   /* ======== Changes ================ */
@@ -1081,7 +1089,7 @@ label.form-label {
   }
 
   #balance_card_small {
-    margin-left: 22px;
+    margin-left: 27px;
   }
 
   #invest-icon {
