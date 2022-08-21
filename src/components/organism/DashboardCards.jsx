@@ -7,11 +7,23 @@ import TotalFixedSavings from "../molecules/TotalFixedSavings";
 import TotalFlexibleSavings from "../molecules/TotalFlexibleSavings";
 import NotificationSound from "../../assets/noti2.mp3";
 import { BaaChaat } from "../molecules/BarChart";
+import PyCh from "../molecules/PyCh";
 
 const DashboardCards = () => {
   const [user, balance, themeCheck, loading, error, token, goalsShare] =
     useContext(appContext);
   const [goals, setGoals] = goalsShare;
+  
+  let totalTarget = goals
+  .map(({ amount_to_save }) => amount_to_save)
+  .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
+
+  let totalSaved = goals
+  .map(({ amount_saved }) => amount_saved)
+  .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
+
+
+
   const [showError, setShowError] = useState(true);
 
   const darkTheme = `dashboard-cards themeTransition ${
@@ -91,6 +103,24 @@ const DashboardCards = () => {
             <BaaChaat />
           </div>
         </Col>
+
+        <Row id="pieWrapper">
+          <div className="moneyWrapper">
+            <Col>
+              <PyCh />
+            </Col>
+            <Col>
+              <Col>
+                <span>Total Savings Target</span>
+                <h3 id="totalSpendig">₦{totalTarget.toLocaleString("en-US")}</h3>
+              </Col>
+              <Col>
+                <span>Total Money Saved</span>
+                <h3 id="totalMoney">₦{totalSaved.toLocaleString("en-US")}</h3>
+              </Col>
+            </Col>
+          </div>
+        </Row>
       </Container>
     </div>
   );

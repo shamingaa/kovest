@@ -935,11 +935,38 @@ label.form-label {
   background-color: white;
 }
 
+#totalSpendig{
+  color: #033D71;
+}
+
+#totalMoney{
+  color: #F12760;
+}
+
+.moneyWrapper{
+  display: flex;
+  align-items: center;
+}
+
+#pieWrapper{
+  display: none;
+}
+
+
 /* ------------------------------------
   MEDIA QUERIES
 ------------------------------------- */
 
 @media screen and (max-width: 768px) {
+  #pieWrapper {
+    display: block;
+}
+
+  .bar-wrapper {
+    display: none;
+}
+
+
   .layoutRow {
     flex-direction: column-reverse;
   }

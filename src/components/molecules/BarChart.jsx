@@ -83,5 +83,5 @@ export function BaaChaat() {
     ],
   };
 
-  return <Bar options={options} data={data} height={102} />;
+  return <Bar options={options} data={data} height={102} id="baachaat"/>;
 }
