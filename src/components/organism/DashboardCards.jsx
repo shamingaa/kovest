@@ -13,16 +13,14 @@ const DashboardCards = () => {
   const [user, balance, themeCheck, loading, error, token, goalsShare] =
     useContext(appContext);
   const [goals, setGoals] = goalsShare;
-  
+
   let totalTarget = goals
-  .map(({ amount_to_save }) => amount_to_save)
-  .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
+    .map(({ amount_to_save }) => amount_to_save)
+    .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
 
   let totalSaved = goals
-  .map(({ amount_saved }) => amount_saved)
-  .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
-
-
+    .map(({ amount_saved }) => amount_saved)
+    .reduce((currentvalue, laterValue) => currentvalue + laterValue, 0);
 
   const [showError, setShowError] = useState(true);
 
@@ -111,11 +109,17 @@ const DashboardCards = () => {
             </Col>
             <Col>
               <Col>
-                <span>Total Savings Target</span>
-                <h3 id="totalSpendig">₦{totalTarget.toLocaleString("en-US")}</h3>
+                <span className={`themeTransition ${themeCheck ? "" : "darkText"}`}>
+                  Total Savings Target
+                </span>
+                <h3 id="totalSpendig">
+                  ₦{totalTarget.toLocaleString("en-US")}
+                </h3>
               </Col>
               <Col>
-                <span>Total Money Saved</span>
+                <span className={`themeTransition ${themeCheck ? "" : "darkText"}`}>
+                  Total Money Saved
+                </span>
                 <h3 id="totalMoney">₦{totalSaved.toLocaleString("en-US")}</h3>
               </Col>
             </Col>

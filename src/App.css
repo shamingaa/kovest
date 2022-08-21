@@ -952,6 +952,9 @@ label.form-label {
   display: none;
 }
 
+.darkText{
+  color: var(--secondyGray);
+}
 
 /* ------------------------------------
   MEDIA QUERIES
