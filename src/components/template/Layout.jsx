@@ -104,38 +104,37 @@ const Layout = () => {
 
   return (
     <>
-      {!pageLoading ? (
+      {pageLoading ? (
         <div id="mainLoader">
           <img src={SpinnerMain} alt="loader" />
         </div>
       ) : (
-        // <appContext.Provider value={appState}>
-        //   <Container fluid>
-        //     <Row className="layoutRow">
-        //       <Col
-        //         lg="2"
-        //         md="2"
-        //         className={`side-bar-col themeTransition ${
-        //           themeCheck === true ? " " : "themeDark"
-        //         }`}
-        //       >
-        //         <SideNavbar />
-        //       </Col>
+        <appContext.Provider value={appState}>
+          <Container fluid>
+            <Row className="layoutRow">
+              <Col
+                lg="2"
+                md="2"
+                className={`side-bar-col themeTransition ${
+                  themeCheck === true ? " " : "themeDark"
+                }`}
+              >
+                <SideNavbar />
+              </Col>
 
-        //       <Col
-        //         lg="10"
-        //         md="10"
-        //         className={` themeTransition ${
-        //           themeCheck === true ? "content-light" : "content-dark"
-        //         } `}
-        //       >
-        //         <TopNavBar mode={themeCheck} setMode={setThemeCheck} />
-        //         <Outlet />
-        //       </Col>
-        //     </Row>
-        //   </Container>
-        // </appContext.Provider>
-        ""
+              <Col
+                lg="10"
+                md="10"
+                className={` themeTransition ${
+                  themeCheck === true ? "content-light" : "content-dark"
+                } `}
+              >
+                <TopNavBar mode={themeCheck} setMode={setThemeCheck} />
+                <Outlet />
+              </Col>
+            </Row>
+          </Container>
+        </appContext.Provider>
       )}
     </>
   );
