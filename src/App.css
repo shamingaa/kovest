@@ -1149,6 +1149,23 @@ label.form-label {
     padding: 0;
   }
 
+  .alert {
+    padding: 7px !important;
+  }
+
+  .alertContainer {
+    width: 56%;
+    top: 2%;
+    left: 19%;
+  }
+  .sideLinkWrapper span {
+    padding-left: 0 !important;
+  }
+
+
+  #createGoalBtn {
+    padding: 9px 22px !important;
+  }
   /* ---------------------------------
     LOGIN
   ------------------------------------ */
@@ -1223,25 +1240,25 @@ label.form-label {
 
   .goal-cards {
     margin-bottom: 12px;
-}
+  }
 
-label.form-label {
-  font-size: 13px !important;
-}
+  label.form-label {
+    font-size: 13px !important;
+  }
 
-.createGoalForm {
-  padding: 21px;
-}
+  .createGoalForm {
+    padding: 21px;
+  }
 
-#profileChangePassword {
-  font-size: 12px;
-  padding: 8px 0;
-}
+  #profileChangePassword {
+    font-size: 12px;
+    padding: 8px 0;
+  }
 
-#profileAddCard {
-  font-size: 12px;
-  padding: 8px 0;
-}
+  #profileAddCard {
+    font-size: 12px;
+    padding: 8px 0;
+  }
 
 }
 

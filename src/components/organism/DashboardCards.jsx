@@ -25,7 +25,7 @@ const DashboardCards = () => {
   }
 
   function AlertError() {
-    if (showError) {
+    if (true) {
       return (
         <div className="alertContainer">
           <Alert
