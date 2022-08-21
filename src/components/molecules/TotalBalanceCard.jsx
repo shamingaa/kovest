@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { appContext } from "../template/Layout";
 import AddSVG from "../atom/AddSVG";
 import SendSVG from "../atom/SendSVG";
+import ripple from "../../assets/ripple.svg"
 import { currentDate } from "../../services/Authenticator";
 // import { currentTime } from "../../services/Authenticator";
 import { useNavigate } from "react-router-dom";
@@ -78,6 +79,7 @@ const TotalBalanceCard = () => {
                 <div className="iconCase">
                   <AddSVG />
                   <span>Add</span>
+                  <img style={{width: 24}} src={ripple} alt="loader" />
                 </div>
               </div>
             </Col>

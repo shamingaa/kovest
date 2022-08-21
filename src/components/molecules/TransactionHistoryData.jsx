@@ -3,11 +3,13 @@ import axios from "axios";
 import { Col, Row } from "react-bootstrap";
 import { appContext } from "../template/Layout";
 import moment from "moment";
+import ripple from "../../assets/rolling.svg";
 
 const TransactionHistoryData = ({ goalData }) => {
-  const [user, balance , themeCheck, loading, error, token, goalsShare] =
+  const [user, balance, themeCheck, loading, error, token, goalsShare] =
     useContext(appContext);
   const { goal_title, id } = goalData;
+  const [pageLoading, setPageLoading] = useState(true);
   const [history, setHistory] = useState([]);
 
   // ============ Get Transaction History ===============
@@ -25,6 +27,7 @@ const TransactionHistoryData = ({ goalData }) => {
           .map((item) => item)
           .filter(({ goal_id }) => goal_id == id);
         setHistory(filtered);
+        setPageLoading(false);
       } catch (error) {
         if (error.response) {
           console.log(error.response.data.message);
@@ -36,39 +39,45 @@ const TransactionHistoryData = ({ goalData }) => {
 
   return (
     <>
-      {history.map(({ desc, status, goal, createdAt, type, amount }) => (
-        <div
-          className={`historyCard themeTransition ${
-            themeCheck ? "" : "lightDark"
-          }`}
-        >
-          <div className="historyHeader">
-            <Row>
-              <Col>
-                <h6>{desc}</h6>
-              </Col>
-              <Col>
-                <h6>{moment(createdAt).format("MMM Do YYYY, h:mm a")}</h6>
-              </Col>
-              <Col>
-                <h6
-                  id="historyAmount"
-                  className={type === "liquidation" ? "red" : ""}
-                >
-                  {type === "liquidation" ? "₦" : "₦"}
-                  {amount.toLocaleString("en-US")}
-                </h6>
-              </Col>
-              <Col>
-                <h6 id="historyStatus">{status}</h6>
-              </Col>
-              <Col>
-                <h6 style={{ textTransform: "Capitalize" }}>{type}</h6>
-              </Col>
-            </Row>
-          </div>
+      {pageLoading ? (
+        <div id="mainLoader">
+          <img src={ripple} style={{width: 40}} alt="loader" />
         </div>
-      ))}
+      ) : (
+        history.map(({ desc, status, goal, createdAt, type, amount }) => (
+          <div
+            className={`historyCard themeTransition ${
+              themeCheck ? "" : "lightDark"
+            }`}
+          >
+            <div className="historyHeader">
+              <Row>
+                <Col>
+                  <h6>{desc}</h6>
+                </Col>
+                <Col>
+                  <h6>{moment(createdAt).format("MMM Do YYYY, h:mm a")}</h6>
+                </Col>
+                <Col>
+                  <h6
+                    id="historyAmount"
+                    className={type === "liquidation" ? "red" : ""}
+                  >
+                    {type === "liquidation" ? "₦" : "₦"}
+                    {amount.toLocaleString("en-US")}
+                  </h6>
+                </Col>
+                <Col>
+                  <h6 id="historyStatus">{status}</h6>
+                </Col>
+                <Col>
+                  <h6 style={{ textTransform: "Capitalize" }}>{type}</h6>
+                </Col>
+              </Row>
+            </div>
+          </div>
+        ))
+      )}
     </>
   );
 };
