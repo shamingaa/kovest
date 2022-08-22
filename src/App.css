@@ -956,6 +956,10 @@ label.form-label {
   color: var(--secondyGray);
 }
 
+.noShadow{
+  box-shadow: none !important;
+}
+
 /* ------------------------------------
   MEDIA QUERIES
 ------------------------------------- */

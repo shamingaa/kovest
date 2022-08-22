@@ -1,9 +1,19 @@
+import { useContext } from "react";
 import { Container, Form } from "react-bootstrap";
+import { appContext } from "./template/Layout";
 
 const ChangePasswordForm = () => {
+  const [user, balance, themeCheck, loading, error, token, goalsShare] =
+    useContext(appContext);
+  const inputTheme = themeCheck ? "" : "themeTransition inputDark";
+
   return (
     <Container className="cardFormWrapper">
-      <div className="cardForm">
+      <div
+        className={`cardForm themeTransition  ${
+          themeCheck ? " " : "themeDark"
+        }`}
+      >
         <Form>
           <Form.Label style={{ fontSize: 20, color: "#878a91" }}>
             Change Password
@@ -14,7 +24,7 @@ const ChangePasswordForm = () => {
               type="text"
               placeholder="Enter current password"
               required
-              // className={inputTheme}
+              className={inputTheme}
             />
           </Form.Group>
           <Form.Group className="mb-3">
@@ -23,7 +33,7 @@ const ChangePasswordForm = () => {
               type="text"
               placeholder="Enter new password"
               required
-              // className={inputTheme}
+              className={inputTheme}
             />
           </Form.Group>
           <Form.Group className="mb-3">
@@ -32,7 +42,7 @@ const ChangePasswordForm = () => {
               type="text"
               placeholder="Re-type password"
               required
-              // className={inputTheme}
+              className={inputTheme}
             />
           </Form.Group>
 

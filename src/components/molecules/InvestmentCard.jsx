@@ -10,7 +10,7 @@ const InvestmentCard = () => {
   return (
     <div
       className={`dashboard-cards  investment-card themeTransition  ${
-        themeCheck ? " " : "invest-dark-theme"
+        themeCheck ? " " : "themeTransition invest-dark-theme"
       }`}
     >
       <Row id="card-shape">

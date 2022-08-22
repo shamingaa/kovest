@@ -24,7 +24,7 @@ const Liquidation = () => {
   const userData = { goal_id: goalTitle.id, password };
   const [shouldRedirect, setShouldRedirect] = useState(false);
   const audioPlayer = useRef(null);
-
+  const inputTheme = themeCheck ? "" : "themeTransition inputDark";
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
   const [pass, setPass] = useState(false);
@@ -113,7 +113,9 @@ const Liquidation = () => {
             ref={audioPlayer}
             src={pass === true ? NotificationSound : NotificationSuccess}
           />
-          <div className="cardForm">
+          <div className={`cardForm themeTransition  ${
+          themeCheck ? " " : "themeDark"
+        }`}>
             <Form onSubmit={handleLiquidate}>
               <Form.Label
                 style={{ fontSize: 26, color: "#1a667a", fontWeight: "bold" }}
@@ -166,6 +168,7 @@ const Liquidation = () => {
                     placeholder="Password"
                     required
                     onInput={(e) => setPassword(e.target.value.trim())}
+                    className={inputTheme}
                   />
                   <img
                     src={passwordType === "password" ? eye : eyeClose}

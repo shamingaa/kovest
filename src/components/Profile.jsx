@@ -12,14 +12,12 @@ const Profile = () => {
   const { first_name, last_name, dob, gender, email } = user;
   const inputTheme = themeCheck ? "" : "inputDark";
   const dateOfBirth = moment(dob).utc().format("MMMM do, YYYY");
-  const theme = `themeTransition ${themeCheck ? "" : "themeDark"}`;
+  const theme = `themeTransition ${themeCheck ? "" : "themeDark noShadow"}`;
   const profileStyle = {
     backgroundImage: `url("${profilePic}")`,
     backgroundSize: "cover",
     backgroundPosition: "top",
   };
-
-  //   console.log(dateOfBirth);
 
   const redirectToChangePassword = () => {
     navigate("/app/changePassword");
@@ -28,13 +26,16 @@ const Profile = () => {
   const redirectToAddCard = () => {
     navigate("/app/addCard");
   };
+  
 
   return (
     <Container id="profile_container">
       <div className="profileWrapper">
         <div className={`profile ${theme}`}>
           <Row className="details">
-            <div className="avaterHolder" style={profileStyle}></div>
+            <div className={`avaterHolder themeTransition  ${
+          themeCheck ? " " : "noShadow"
+        }`} style={profileStyle}></div>
           </Row>
           <h3 id="userName">{`${first_name} ${last_name}`}</h3>
           <div className="profileDetails" style={{ marginTop: 30 }}>

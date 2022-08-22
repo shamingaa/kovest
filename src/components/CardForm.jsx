@@ -11,7 +11,7 @@ import cards from "../assets/cards.png";
 
 const CardForm = () => {
   const [user, balance , themeCheck, loading, error, token, goalsShare] = useContext(appContext);
-  const inputTheme = themeCheck ? "" : "inputDark";
+  const inputTheme = themeCheck ? "" : "themeTransition inputDark";
   const navigate = useNavigate();
   const [card_number, setCardNumber] = useState("");
   const [cardMonth, setCardMonth] = useState("");
@@ -51,7 +51,9 @@ const CardForm = () => {
     <>
       <GoalSection />
       <Container className="cardFormWrapper">
-        <div className="cardForm">
+        <div className={`cardForm themeTransition  ${
+        themeCheck ? " " : "themeDark"
+      }`}>
           <Form onSubmit={handleAddCard}>
             <div className="cardDescription">
               <Form.Label style={{ fontSize: 20, color: "#878a91" }}>

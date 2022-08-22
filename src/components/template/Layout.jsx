@@ -29,13 +29,12 @@ const Layout = () => {
     setToken(fetchedToken.token);
   }, []);
 
+  // =========== Get Goals =================
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
-
-    // =========== Get Goals =================
     const getGoals = async () => {
       try {
         const res = await axios({
@@ -56,26 +55,32 @@ const Layout = () => {
 
   // =========== Get Balances =================
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    
     const getBalance = async () => {
       try {
-        if(token){
+        if (token) {
           const res = await axios({
             method: "get",
             url: "https://kovest.herokuapp.com/v1/user/me",
             headers: { Authorization: `Bearer ${token}` },
           });
-          
-  
+
           setBalance(res?.data);
         }
       } catch (error) {
-          if (error.response) {
-            console.log(error.response.data.message);
-          }
+        if (error.response) {
+          console.log(error.response.data.message);
+        }
       }
     };
-    getBalance()
+    getBalance();
   }, [token]);
+
+  // console.log(balance);
 
   // ---------- Global Context  Data --------------
   const appState = [
