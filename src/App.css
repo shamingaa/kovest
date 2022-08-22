@@ -1094,6 +1094,7 @@ label.form-label {
   .dashboardRow {
     flex-wrap: nowrap;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
   }
 
   .dashboardRow::-webkit-scrollbar {
@@ -1102,6 +1103,11 @@ label.form-label {
 
   .goal-cards {
     height: 486px;
+  }
+  
+  .dashboard-cards {
+    height: 251px;
+    scroll-snap-align: center;
   }
 
   #savings-buttons-row {
@@ -1145,9 +1151,6 @@ label.form-label {
     padding: 0 !important;
   }
 
-  .dashboard-cards {
-    height: 251px;
-  }
 
   .intro {
     margin-bottom: 19px;
