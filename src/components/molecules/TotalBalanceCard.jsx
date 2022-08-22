@@ -3,13 +3,14 @@ import { useContext } from "react";
 import { appContext } from "../template/Layout";
 import AddSVG from "../atom/AddSVG";
 import SendSVG from "../atom/SendSVG";
-import ripple from "../../assets/ripple.svg"
+import ripple from "../../assets/ripple.svg";
 import { currentDate } from "../../services/Authenticator";
-// import { currentTime } from "../../services/Authenticator";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const TotalBalanceCard = () => {
   const navigate = useNavigate();
+  const [showReminder, setShowReminder] = useState(true);
   const [user, balance, themeCheck, loading, error, token, goalsShare] =
     useContext(appContext);
   const [goals, setGoals] = goalsShare;
@@ -30,7 +31,6 @@ const TotalBalanceCard = () => {
       className={`dashboard-cards themeTransition  ${
         themeCheck ? " " : "themeDark"
       }`}
-
       id="balance_card_small"
     >
       <Row id="total-balance-row">
@@ -45,7 +45,9 @@ const TotalBalanceCard = () => {
             >
               Your Total Balance
             </span>
-            <h1 id="total-amount">₦{totalBalance.toLocaleString("en-US")}</h1>
+            <h1 id="total-amount">
+              ₦{isNaN(totalBalance) ? 0 : totalBalance.toLocaleString("en-US")}
+            </h1>
             <span>{currentDate()}</span>
           </div>
         </Col>
@@ -75,11 +77,16 @@ const TotalBalanceCard = () => {
                   themeCheck ? " " : "buttonGroup-dark"
                 } `}
                 onClick={redirectToCreateGoal}
+                onMouseOver={() => setShowReminder(false)}
               >
                 <div className="iconCase">
                   <AddSVG />
                   <span>Add</span>
-                  <img style={{width: 24}} src={ripple} alt="loader" />
+                  {goals.length > 0 ? (
+                    ""
+                  ) : (
+                    <img style={{ width: 24 }} src={ripple} alt="loader" />
+                  )}
                 </div>
               </div>
             </Col>
